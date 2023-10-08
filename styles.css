@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Mengganti font family */
+}
+
+nav {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(7, 106, 126) 100%);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Mengurangi padding di logo */
+}
+
+label.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none; /* Mengubah list style menjadi none */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px; /* Menambahkan sedikit ruang antar menu */
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active, a:hover {
+    color: #ffffff; /* Sintaksis yang benar adalah tanda titik (.) bukan tanda titik dua (:) */
+    font-weight: 100;
+    background: linear-gradient(90deg, rgba(2, 0, 2, 0.21) 40%, rgba(0, 242, 255, 0.238) 100%);
+    transition: .5s;
+    box-shadow: 1px 1px 1px 1px rgba(2, 2, 92, 0.354);
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+section {
+    background: url(https://telegra.ph/file/e1e433c9919cf90aa6299.jpg);
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px) { /* Mengubah "mac-width" menjadi "max-width" */
+    label.logo {
+        font-size: 18px;
+        padding-left: 20px; /* Mengurangi padding kiri */
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1070px) { /* Mengubah "mac-width" menjadi "max-width" */
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000000b6;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover, a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
