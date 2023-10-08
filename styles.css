@@ -1,113 +1,233 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+/* Gaya latar belakang */
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
-
+html * {
+  box-sizing: inherit;
+}
 body {
-    font-family: Arial, sans-serif; /* Mengganti font family */
+  background: #000000;  /* fallback for old browsers */
+  display: grid;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  place-content: center;
+  position: relative;
+}
+body::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
 
-nav {
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(7, 106, 126) 100%);
-    height: 80px;
+#particles-js {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    z-index: -1; /* Membawa partikel ke belakang konten */
+}
+
+/* Centering content */
+.center-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px; /* Mengurangi padding di logo */
+    justify-content: center;
+    height: 100vh; /* Menggunakan tinggi viewport untuk mengisi seluruh tinggi layar */
 }
 
-label.logo {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+
+.buttons {
+  position: relative;
+  z-index: 100;
+}
+.buttons--active .allbtns {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.buttons--active .button:nth-child(1) {
+  transform: translate(-110%, -150%) rotate(0deg);
+}
+.buttons--active .button:nth-child(2) {
+  transform: translate(10%, -150%) rotate(0deg);
+}
+.buttons--active .button:nth-child(3) {
+  transform: translate(65%, -50%) rotate(0deg);
+}
+.buttons--active .button:nth-child(4) {
+  transform: translate(10%, 50%) rotate(0deg);
+}
+.buttons--active .button:nth-child(5) {
+  transform: translate(-110%, 50%) rotate(0deg);
+}
+.buttons--active .button:nth-child(6) {
+  transform: translate(-165%, -50%) rotate(0deg);
+}
+.buttons__toggle {
+  appearance: none;
+  align-items: center;
+  background-color: #000;
+  border: 4px solid #19182b;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  height: 8rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 8rem;
+  position: relative;
+  z-index: 1;
+}
+.buttons__toggle:focus, .buttons__toggle--active {
+  background-color: #16228b;
+}
+.buttons__toggle i {
+  font-size: 3.2rem;
+}
+.allbtns {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  transform-origin: center;
+  transition: transform 0.75s ease;
+  z-index: 0;
+}
+.button {
+  appearance: none;
+  align-items: center;
+  background-color: #000;
+  border: 4px solid #19182b;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  height: 8rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 8rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+.z:focus, .button--active {
+  background-color: #16228b;
+}
+.button i {
+  font-size: 3.2rem;
+}
+.button:nth-child(1) {
+  transition-delay: calc(1 * 0.075s);
+  z-index: calc(6 - 1);
+}
+.button:nth-child(2) {
+  transition-delay: calc(2 * 0.075s);
+  z-index: calc(6 - 2);
+}
+.button:nth-child(3) {
+  transition-delay: calc(3 * 0.075s);
+  z-index: calc(6 - 3);
+}
+.button:nth-child(4) {
+  transition-delay: calc(4 * 0.075s);
+  z-index: calc(6 - 4);
+}
+.button:nth-child(5) {
+  transition-delay: calc(5 * 0.075s);
+  z-index: calc(6 - 5);
+}
+.button:nth-child(6) {
+  transition-delay: calc(6 * 0.075s);
+  z-index: calc(6 - 6);
 }
 
-nav ul {
-    list-style-type: none; /* Mengubah list style menjadi none */
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 10px; /* Menambahkan sedikit ruang antar menu */
-}
-
-nav ul li a {
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-}
-
-a.active, a:hover {
-    color: #ffffff; /* Sintaksis yang benar adalah tanda titik (.) bukan tanda titik dua (:) */
-    font-weight: 100;
-    background: linear-gradient(90deg, rgba(2, 0, 2, 0.21) 40%, rgba(0, 242, 255, 0.238) 100%);
-    transition: .5s;
-    box-shadow: 1px 1px 1px 1px rgba(2, 2, 92, 0.354);
-}
-
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
+/* Gaya tautan teks (link) */
+.text-link {
+    text-decoration: underline;
+    color: #ffffff; /* Warna teks putih */
     cursor: pointer;
-    display: none;
 }
 
-#check {
-    display: none;
+/* Gaya teks vertikal */
+.vertical-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section {
-    background: url(https://telegra.ph/file/e1e433c9919cf90aa6299.jpg);
-    background-size: cover;
-    height: calc(100vh - 80px);
-}
-
-@media (max-width: 952px) { /* Mengubah "mac-width" menjadi "max-width" */
-    label.logo {
-        font-size: 18px;
-        padding-left: 20px; /* Mengurangi padding kiri */
+/* Animasi datang dari bawah */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    nav ul li a {
-        font-size: 16px;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 1070px) { /* Mengubah "mac-width" menjadi "max-width" */
-    .checkbtn {
-        display: block;
-    }
-    ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #000000b6;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a {
-        font-size: 20px;
-    }
-    a:hover, a.active {
-        background: none;
-        color: #0082e6;
-    }
+/* Gaya ikon dengan animasi datang dari bawah */
+.animated-icon {
+    animation: slideInUp 1s ease-in-out; /* Animasi datang dengan durasi 1 detik */
+}
 
-    #check:checked ~ ul {
-        left: 0;
-    }
+/* Gaya teks perkenalan dengan animasi datang dari bawah */
+.animated-intro-text {
+    text-align: center;
+    animation: slideInUp 1s ease-in-out; /* Animasi datang dengan durasi 1 detik */
+    color: #ffffff;
+}
+
+/* Gaya teks tautan URL dengan animasi datang dari bawah */
+.animated-text-link {
+    text-decoration: underline;
+    color: #ffffff;
+    cursor: pointer;
+    animation: slideInUp 1s ease-in-out; /* Animasi datang dengan durasi 1 detik */
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0; /* Padding atas dan bawah untuk memberikan ruang di sekitar teks copyright */
+    opacity: 0.7; /* Nilai opacity yang lebih rendah membuat teks menjadi transparan */
+}
+
+.img-fluid.rounded-circle {
+    border-radius: 50%; /* Ini akan membuat gambar bundar */
+}
+
+
+.btnurl {
+    display: inline-block;
+    background: #007bff;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    transition: background 0.5s;
+}
+
+.btnurl:hover {
+    background: #ababab;
 }
