@@ -1,0 +1,253 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Katou Megumi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <meta property="og:title" content="Calestial World" />
+    <meta property="og:description" content="Database Calestial BOT WhatsApp" />
+    <meta property="og:image" content="https://jakquellyn.github.io/assets/Calestial1.jpg" />
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <style>
+        #particles-js {
+            position: absolute;
+            width: 99%;
+            height: 95%;
+            z-index: -1;
+            /* Membawa partikel ke belakang konten */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Database Penuh!</h2>
+            <p>Silakan gunakan /Mahiru/Jingliu!</p>
+        </div>
+    </div>
+    <style>
+        .blue-color {
+            color: blue;
+        }
+
+        .green-color {
+            color: green;
+        }
+
+        .teal-color {
+            color: teal;
+        }
+
+        .yellow-color {
+            color: yellow;
+        }
+
+        .red-color {
+            color: red;
+        }
+    </style>
+    <div id="particles-js"></div>
+    <img id="Photo" src="assets/Calestial.png" alt="Yuuka">
+    <spam id="Name">
+        Database Calestial By Syah.
+    </spam>
+
+    <div id="linksbutton" class="pl-4 pr-4">
+        <a id="link1" class="links" href="https://jakquellyn.github.io/GenshinBuild" target="_blank"
+            style="border-radius: 15px;">Genshin Impact</a>
+        <a id="link2" class="links" href="https://jakquellyn.github.io/HonkaiStarRail" target="_blank"
+            style="border-radius: 15px;">Honkai Star: Rail</a>
+        <a id="link3" class="links" href="https://jakquellyn.github.io/ElysianRealm" target="_blank"
+            style="border-radius: 15px;">Honkai Impact</a>
+        <a id="link4" class="links" href="wa.me/+62 857-8524-3511" style="border-radius: 15px;">Bot WhatsApp</a>
+    </div>
+
+     <!-- Popup iklan -->
+     <-- <div id="custom-popup" class="custom-popup">
+        <div class="popup-content2">
+            <span class="custom-close" id="custom-close-popup">&times;</span>
+                <div class="modal-content rounded-0">
+                  <div class="modal-body py-0">
+        
+                    
+                    <div class="d-block main-content">
+                      <img src="https://jakquellyn.github.io/menu/bronny/1.jpg" alt="Image" class="img-fluid" style="background-color: #b2fcff; max-height: 200px;">
+                      <div class="content-text p-2">
+                        
+                        <h4 class="mb-2 text-center">Calestial World</h4>
+                        <p class="mb-4">
+                            <p><strong>WEB Developer</strong></p>
+                            <ul>
+                                <li>Landing Page</li>
+                                <li>Company Profile</li>
+                                <li>Other Web</li>
+                            </ul>
+                            <p><strong>Chat Bot Whatsapp</strong></p>
+                            <ul>
+                                <li>Custom Bot</li>
+                                <li>BOT Store</li>
+                            </ul>
+                        </p>
+                        <div class="d-flex">
+                          <div class="ml-auto">
+                            <a href="https://Calestial.site" class="btn btn-primary px-4">Pesan Sekarang</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+        </div>
+    </div> 
+
+    <script>
+        // Fungsi untuk mengacak urutan tautan kecuali link4
+        // Fungsi untuk menampilkan popup
+        document.getElementById("link4").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("popup").style.display = "block";
+        });
+
+        document.getElementById("close-popup").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
+        });
+        function shuffleLinks() {
+            const linksContainer = document.getElementById('linksbutton');
+            const links = Array.from(linksContainer.getElementsByClassName('links'));
+
+            // Pisahkan link4 dari daftar tautan yang akan diacak
+            const link4 = document.getElementById('link4');
+            const index = links.indexOf(link4);
+            if (index > -1) {
+                links.splice(index, 1);
+            }
+
+            // Acak urutan tautan
+            for (let i = links.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [links[i], links[j]] = [links[j], links[i]];
+            }
+
+            // Hapus semua tautan dari kontainer
+            linksContainer.innerHTML = '';
+
+            // Tambahkan tautan yang sudah diacak kembali ke kontainer
+            links.forEach(link => {
+                linksContainer.appendChild(link);
+            });
+
+            // Tambahkan link4 di bawah tautan-tautan yang sudah diacak
+            linksContainer.appendChild(link4);
+        }
+
+        // Panggil fungsi untuk mengacak urutan tautan saat halaman dimuat
+        window.addEventListener('load', shuffleLinks);
+    </script>
+
+
+    <spam id="title">Grup Whatsapp:</spam>
+    <div class="Gears">
+        <a class="gear" href="https://chat.whatsapp.com/BC8LlVRpKUM8DRdKmVJ065" target="_blank"
+            style="border-radius: 15px;">Calestial Support Group</a>
+       <!-- <a class="gear" href="https://chat.whatsapp.com/IV3Asygn96aIWxmzVqRm8n" target="_blank"
+            style="border-radius: 15px;">🍏 Theresa Kawai</a> -->
+    </div>
+    <spam id="footertext"> Made with ❤️ By <a href="https://Calestial.biz.id" style="color: #fff;">Syah</a></spam>
+    <spam id="footertext"> Visitor: <span id="counter">Loading...</span></spam>
+
+    <script>
+        // Fungsi untuk mengambil data dari URL
+
+        function fetchData() {
+            const referer = document.referrer;
+            console.log("Referer: " + referer);
+
+            fetch(`https://counter.4relial.repl.co/?referer=${referer}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Mengambil nilai 'count' dari data JSON
+                    const count = data.count;
+
+                    // Menampilkan nilai count pada elemen HTML dengan id 'counter'
+                    document.getElementById('counter').textContent = count;
+                })
+                .catch(error => {
+                    console.error('Terjadi kesalahan:', error);
+                });
+        }
+
+        // Memanggil fungsi fetchData untuk pertama kali saat halaman dimuat
+        fetchData();
+
+        // Menjadwalkan pemanggilan fetchData setiap beberapa detik (misalnya setiap 5 detik)
+        setInterval(fetchData, 5000); // Ubah angka ini sesuai dengan kebutuhan Anda
+    </script>
+</body>
+<!-- Tambahkan library particles.js di sini -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 120, // Mengubah jumlah partikel
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#007bff" // Mengubah warna partikel menjadi biru (#007bff)
+            },
+            "shape": {
+                "type": "circle", // Mengatur bentuk partikel menjadi bintang
+                "stroke": {
+                    "width": 0,
+                    "color": "#ffffff"
+                },
+            },
+            "opacity": {
+                "value": 0.6, // Mengubah tingkat kejelasan partikel
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 0.5,
+                    "opacity_min": 0.3,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 7, // Mengubah ukuran partikel
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 5,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+        },
+        "interactivity": {
+            "events": {
+                "onhover": {
+                    "enable": false, // Nonaktifkan efek saat mouse hover
+                    "mode": "repulse"
+                }
+            },
+        },
+        "line_linked": {
+            "enable": false // Nonaktifkan jaring-jaring
+        },
+    });
+</script>
+
+</html>
